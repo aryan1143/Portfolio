@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="navLogo">
+            <img src="navLogo.png" id="navLogo">
+        </div>
+        <div class="nav">
+            <div class="navLinks">
+                <div class="navLink1">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navLink2">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="navLink3">
+                    <a href="projects.html">Projects</a>
+                </div>
+                <div class="navLink4">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="navButtons">
+                <div class="navButton1">
+                    <button id="themeButton" onclick="theme()">
+                        <img src="lightMode.png" id="themeImg">
+                    </button>
+                </div>
+                <div class="navButton2">
+                    <button id="menuButton" onclick="menuBar()">
+                        <img src="menu.png" id="menuImg">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <aside id="aside">
+        <a href="index.html" class="side">
+            <div>
+                <img src="home.png">
+            </div>
+            <div>Home</div>
+        </a>
+        <a href="projects.html" class="side">
+            <div>
+                <img src="projects.png">
+            </div>
+            <div>Projects</div>
+        </a>
+        <a href="about.html" class="side">
+            <div>
+                <img src="aboutme.png">
+            </div>
+            <div>About</div>
+        </a>
+        <a href="contact.html" class="side">
+            <div>
+                <img src="contact.png">
+            </div>
+            <div>Contact</div>
+        </a>
+    </aside>
+
+    <main>
+        <div class="about">
+            <div class="about1">
+                <div class="subAbout1">
+                    <h2>Hi, I am <div id="name"><h2>Aryan</h2></div></h2>
+                </div>
+                <div class="subAbout1">
+                    <p>Learning about web and trying to be as creative as I can be. I love improving my skills and making projects.</p>
+                </div>
+                <div class="subAbout1">
+                    <p>This is my place for <span id="quote">thoughts, reflections & everything</span> in between. Have a good read!</p>
+                </div>
+            </div>
+            <div class="about2">
+                <div class="subAbout2">
+                    <a href="projects.html">
+                        <div>
+                            <div><img src="project.png"></div>
+                            <div>What I built </div>
+                        </div>
+                        <span>Projects →</span>
+                    </a>
+                </div>
+                <div class="subAbout2">
+                    <a href="about.html">
+                        <div>
+                            <div><img src="about.png"></div>
+                            <div>Read my story </div>
+                        </div>
+                        <span>About →</span>
+                    </a>
+                </div>
+                <div class="subAbout2">
+                    <a href="resume.html">
+                        <div>
+                            <div><img src="hire.png"></div>
+                            <div>Hire me! </div>
+                        </div>
+                        <span>Resume →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="subSkills1">
+                <h2>My Skills</h2>
+            </div>
+            <div class="subSkills2">
+                <p>I like to learn various technologies and use them for my creativity and always ready to explore the world of tech.</p>
+            </div>
+            <div class="subSkills3">
+                <img src="html.png" title="HTML">
+                <img src="css.png" title="CSS">
+                <img src="javascript.png" title="JAVASCRIPT">
+                <img src="vs.png" title="VS CODE">
+            </div>
+            <div class="subSkills4">
+                <img src="java.png" title="JAVA">
+                <img src="c.png" title="C">
+            </div>
+        </div>
+        <div class="projects">
+            <div class="subProjects1">
+                <h2>Selected Projects</h2>
+            </div>
+            <div class="subProjects2">
+                <a href="#" class="project">
+                    <div>
+                        <img src="project1.jpg">
+                    </div>
+                    <div>
+                        <h3>AI ChatBot</h3>
+                    </div>
+                    <div>
+                        <p>This AI chatbot is made to help the content creater to be able to have a assistent which will help them with their content creation. The model is used in this is Gemini's model.</p>
+                    </div>
+                </a>
+                <a href="#" class="project">
+                    <div>
+                        <img src="project2.jpg">
+                    </div>
+                    <div>
+                        <h3>Resturent Handle Page</h3>
+                    </div>
+                    <div>
+                        <p>This is an resturent handle page which is using just an example resturent, in this web app we can book the table and check out the dishes and their prices.</p>
+                    </div>
+                </a>
+                <a href="#" class="project">
+                    <div>
+                        <img src="project3.jpg">
+                    </div>
+                    <div>
+                        <h3>Portfolio</h3>
+                    </div>
+                    <div>
+                        <p>This is my portfolio from where you are currently visiting, this portfolio is made with HTML CSS and JAVASCRIPT and done very creatively.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Aryan Prajapati • 2025 • Have a good day! • <a href="contact.html"> Contact</a></p>
+    </footer>
+</body>
+</html>

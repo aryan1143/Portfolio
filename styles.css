@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --bg-color: linear-gradient(to bottom, rgb(1, 0, 5), rgb(1, 0, 20));
+    --text-color: white;
+    --text-p-color: rgb(195, 195, 195);
+    --filter: invert(100%);
+    --aside-bg-color: rgba(255, 255, 255, 0.15);
+    --nav-bg-color: rgba(255, 255, 255, 0.045);
+    --project-outline-color: rgba(255, 255, 255, 0.3);
+    --bg-gredient: conic-gradient(rgb(76, 0, 208), rgb(107, 0, 201), rgb(90, 0, 193), rgb(0, 0, 194), rgb(187, 0, 128));
+    --nav-a-hover: rgba(255, 255, 255, 0.06);
+    /* --bg-quote: rgb(34, 54, 90); */
+    --border-animation-color: 2px solid rgb(255, 255, 255);
+}
+
+.light-mode {
+    --bg-color: linear-gradient(to bottom, rgb(244, 243, 255), rgb(255, 255, 255));
+    --text-color: black;
+    --text-p-color: rgb(96, 96, 96);
+    --aside-bg-color: rgba(98, 98, 98, 0.2);
+    --nav-bg-color: rgba(0, 0, 0, 0.065);
+    --project-outline-color: rgba(0, 0, 0, 0.267);
+    --bg-gredient: conic-gradient(rgb(137, 69, 255), rgb(163, 58, 255), rgb(163, 83, 255), rgb(33, 33, 255), rgb(255, 87, 202));
+    --nav-a-hover: rgba(0, 0, 0, 0.08);
+    --filter: invert(0%);
+    /* --bg-quote: rgb(191, 213, 255); */
+    --border-animation-color: 2px solid black;
+}
+
+
+
+body {
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    /* height: fit-content; */
+    width: 100%;
+    color: var(--text-color);
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+aside {
+    padding: 1.5rem 0;
+    display: none;
+    flex-direction: column;
+    gap: 2vh;
+    position: fixed ;
+    top: calc(2rem + 8.5vh);
+    right: 15vw;
+    background-color: var(--aside-bg-color);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.side img {
+    height: calc(1.5rem + 0.3vw);
+    filter: var(--filter);
+}
+
+.side {
+    padding: 0.3rem 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    align-items: center;
+    display: flex;
+    gap: calc(0.5rem + 1vw);
+}
+
+.side:hover {
+    background-color: rgba(128, 128, 128, 0.521);
+}
+
+.nav {
+    display: flex;
+}
+
+nav a {
+    padding: 0.35rem 0.85rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: calc(0.5rem + 0.6vw);
+    border-radius: 10px;
+    margin: 0 0.7vw;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--nav-a-hover);
+}
+
+nav {
+    margin: 0.5rem auto;
+    padding: 0 2rem;
+    background-color: var(--nav-bg-color);
+    position: sticky;
+    top: 1.5rem;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    width: 70vw;
+    height: 8.5vh;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.navLinks, .navButtons {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#navLogo {
+    filter: var(--filter);
+    height: 3rem;
+    transition: 0.2s;
+    transition: transform 0.5s;
+}
+
+#themeImg {
+    filter: var(--filter);
+    margin: auto;
+    height: 1.5rem;
+}
+
+#menuImg {
+    filter: var(--filter);
+    margin: auto;
+    height: 1.35rem;
+}
+
+.subAbout2 img {
+    height: 2rem;
+    transform: rotate(350deg);
+}
+
+.subAbout2 span {
+    color: rgb(71, 145, 255);
+}
+
+#navLogo:hover {
+    transform: rotate(180deg);
+    scale: 1.05;
+}
+
+main {
+    margin: 15vh auto 0 auto;
+    width: calc(5rem + 60vw);
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.about {
+    margin: 1vh 2vw 1vh 0;
+    display: flex;
+    gap: 10%;
+    width: fit-content;
+    align-items: center;
+}
+
+.skills {
+    margin: 1vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills img {
+    margin: calc(0.5rem + 0.5vw);
+    height: calc(1.5rem + 2vw);
+    transition: 0.15s;
+}
+
+.skills img:hover {
+    scale: 1.02;
+}
+
+.about h2 {
+    font-size: calc(1.8rem + 2.3vw);
+}
+
+.about p, .skills p {
+    font-size: 20px;
+    color: var(--text-p-color);
+}
+
+h2 {
+    gap: 2%;
+    display: flex;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+#name h2{
+    width: 5ch;
+    border-right: var(--border-animation-color);
+    color: rgb(46, 91, 255);
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 4s infinite alternate-reverse;
+}
+
+.about1, .about2 {
+    display: flex;
+    flex-direction: column;
+    gap: calc(4vh + 2vw);
+}
+
+.about1 {
+    gap: calc(2vh + 3vw);
+}
+
+.subAbout2 a, .subAbout2 div{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.about2 {
+    margin: 2rem 0 0 0;
+}
+
+.navButtons button {
+    background: none;
+    margin: calc(0.7rem + 0.2vw);
+    align-items: center;
+    border: transparent;
+    cursor: pointer;
+}
+
+.navButtons button:hover {
+    scale: 1.1;
+}
+
+.subAbout2 a {
+    background: var(--bg-color);
+    padding: 1rem 1.4rem;
+    width: calc(18rem + 3vw);
+    border-radius: 10px;
+    font-size: 20px;
+    justify-content: space-between;
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+}
+.subAbout2 a::before{
+    padding: 0.2rem;
+    border-radius: 10px;
+    content: '';
+    position: absolute;
+    background: var(--bg-gredient);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.subAbout2 a::before {
+    filter: blur(0.8rem);
+    opacity: 0.5;
+}
+
+.subAbout2 a:hover::before {
+    opacity: 1;
+}
+
+.projects img {
+    width: 18rem;
+    border-radius: 10px;
+    transition: 0.15s;
+}
+
+.projects {
+    margin: 0 0 5vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(2rem + 1.5vw);
+}
+
+.subProjects2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1rem 2rem 1.5rem 2rem;
+    border: 1px solid var(--project-outline-color);
+    width: 20em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(0.5rem + 0.5vh);
+}
+
+.project:hover {
+    border: 1px solid rgb(106, 0, 255);
+    img {
+        scale: 1.015;
+    }
+}
+
+.project p {
+    color: var(--text-p-color);
+}
+
+footer {
+    margin: 3vh 0 2vh 0;
+    text-align: center;
+    color: rgb(122, 122, 122);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+    transition: 0.5s;
+}
+
+footer a:hover {
+    text-decoration: underline 0.11rem rgb(0, 68, 255);
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        margin: 5vh auto;
+    }
+
+    aside {
+        right: 1.5rem;
+    }
+
+    nav {
+        width: 90vw;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .subProjects2 {
+        flex-direction: column;
+        gap: 2vh;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+}

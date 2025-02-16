@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="navLogo">
+            <img src="navLogo.png" id="navLogo">
+        </div>
+        <div class="nav">
+            <div class="navLinks">
+                <div class="navLink1">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navLink2">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="navLink3">
+                    <a href="projects.html">Projects</a>
+                </div>
+                <div class="navLink4">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="navButtons">
+                <div class="navButton1">
+                    <button id="themeButton" onclick="theme()">
+                        <img src="lightMode.png" id="themeImg">
+                    </button>
+                </div>
+                <div class="navButton2">
+                    <button id="menuButton" onclick="menuBar()">
+                        <img src="menu.png" id="menuImg">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <aside id="aside">
+        <a href="index.html" class="side">
+            <div>
+                <img src="home.png">
+            </div>
+            <div>Home</div>
+        </a>
+        <a href="projects.html" class="side">
+            <div>
+                <img src="projects.png">
+            </div>
+            <div>Projects</div>
+        </a>
+        <a href="about.html" class="side">
+            <div>
+                <img src="aboutme.png">
+            </div>
+            <div>About</div>
+        </a>
+        <a href="contact.html" class="side">
+            <div>
+                <img src="contact.png">
+            </div>
+            <div>Contact</div>
+        </a>
+    </aside>
+
+    <main>
+        <div class="contact1">
+            <div class="subContact1">
+                <h1>Contact me</h1>
+            </div>
+            <div class="subContact2">
+                <div>
+                    <div>
+                        <img src="email.png">
+                    </div>
+                    <div>
+                        <h4>aryanshasap@gmail.com</h4>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="call.png">
+                    </div>
+                    <div>
+                        <h4>+7753075240</h4>
+                    </div>
+                </div>
+                <div class="links">
+                    <a href="#"><img src="insta.png"></a>
+                    <a href="#"><img src="x.png"></a>
+                    <a href="#"><img src="linkedin.png"></a>
+                    <a href="#"><img src="github.png"></a>
+                </div>
+            </div>
+            <div class="subContact3">
+                <a href="">Download CV</a>
+            </div>
+        </div>
+        <div class="contact2">
+            <div class="subContact11"> 
+                <h1>Contact me</h1>
+            </div>
+            <form action="">
+                <input type="text" placeholder="Your Name" id="name">
+                <input type="email" placeholder="Your Email" id="email">
+                <textarea name="message" id="textarea" placeholder="Message"></textarea>
+                <input type="submit" id="submit">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Aryan Prajapati • 2025 • Have a good day! • <a href="contact.html"> Contact</a></p>
+    </footer>
+</body>
+</html>

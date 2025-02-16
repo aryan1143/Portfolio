@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+:root {
+    --bg-color: linear-gradient(to bottom, rgb(1, 0, 5), rgb(1, 0, 20));
+    --text-color: white;
+    --aside-bg-color: rgba(255, 255, 255, 0.15);
+    --nav-bg-color: rgba(255, 255, 255, 0.045);
+    --filter: invert(100%);
+    --bg-gredient: conic-gradient(rgb(76, 0, 208), rgb(107, 0, 201), rgb(90, 0, 193), rgb(0, 0, 194), rgb(187, 0, 128));
+    --nav-a-hover: rgba(255, 255, 255, 0.06);
+    --button-color: linear-gradient(to bottom, rgb(0, 0, 49), rgb(42, 0, 55));
+    --input-bg-color: rgb(51, 51, 51);
+}
+
+.light-mode {
+    --bg-color: linear-gradient(to bottom, rgb(244, 243, 255), rgb(255, 255, 255));
+    --text-color: black;
+    --aside-bg-color: rgba(98, 98, 98, 0.2);
+    --nav-bg-color: rgba(0, 0, 0, 0.065);
+    --filter: invert(0%); 
+    --bg-gredient: conic-gradient(rgb(137, 69, 255), rgb(163, 58, 255), rgb(163, 83, 255), rgb(33, 33, 255), rgb(255, 87, 202));
+    --nav-a-hover: rgba(0, 0, 0, 0.08);
+    --button-color: linear-gradient(to bottom, rgb(221, 221, 255), rgb(242, 229, 254));
+    --input-bg-color: white;
+}
+
+
+
+body {
+    background: var(--bg-color);
+    background-repeat: no-repeat;
+    height: fit-content;
+    width: 100%;
+    color: var(--text-color);
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+aside {
+    padding: 1.5rem 0;
+    display: none;
+    flex-direction: column;
+    gap: 2vh;
+    position: fixed ;
+    top: calc(2rem + 8.5vh);
+    right: 15vw;
+    background-color: var(--aside-bg-color);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.side img {
+    height: calc(1.5rem + 0.3vw);
+    filter: var(--filter);
+}
+
+.side {
+    padding: 0.3rem 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    align-items: center;
+    display: flex;
+    gap: calc(0.5rem + 1vw);
+}
+
+.side:hover {
+    background-color: rgba(128, 128, 128, 0.521);
+}
+
+.nav {
+    display: flex;
+}
+
+nav a {
+    padding: 0.35rem 0.85rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: calc(0.5rem + 0.6vw);
+    border-radius: 10px;
+    margin: 0 0.7vw;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--nav-a-hover);
+}
+
+nav {
+    margin: 0.5rem auto;
+    padding: 0 2rem;
+    background-color: var(--nav-bg-color);
+    position: sticky;
+    top: 1.5rem;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    width: 70vw;
+    height: 8.5vh;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.navLinks, .navButtons {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#navLogo {
+    filter: var(--filter);
+    height: 3rem;
+    transition: 0.2s;
+    transition: transform 0.5s;
+}
+
+#themeImg {
+    filter: var(--filter);
+    margin: auto;
+    height: 1.5rem;
+}
+
+#navLogo:hover {
+    transform: rotate(180deg);
+    scale: 1.05;
+}
+
+#menuImg {
+    filter: var(--filter);
+    margin: auto;
+    height: 1.35rem;
+}
+
+.navButtons button {
+    background: none;
+    margin: calc(0.7rem + 0.2vw);
+    align-items: center;
+    border: transparent;
+    cursor: pointer;
+}
+
+.navButtons button:hover {
+    scale: 1.1;
+}
+
+main {
+    min-height: 75vh;
+    margin: 8vh auto 0 auto;
+    width: calc(5rem + 60vw);
+    display: flex;
+    gap: 15vw;
+}
+
+.contact1 {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1rem + 1vw);
+}
+
+.contact1 h1 {
+    font-size: calc(2.2rem + 1.2vw);
+}
+
+.subContact2 {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1rem + 1vw);
+}
+
+.subContact2 > div {
+    display: flex;
+    align-items: center;
+    gap: calc(0.5rem + 0.5vw);
+    font-size: calc(0.8rem + 0.45vw);
+}
+
+.subContact2 > div img {
+    height: calc(2.5rem + 1.5vw);
+}
+
+.links img {
+    height: 3.5rem;
+    filter: saturate(0);
+    transition: filter 0.3s,
+                transform 0.3s,
+                scale 0.3s;
+    /* transition: transform 0.3s; */
+}
+
+.links img:hover{
+    filter: saturate(1);
+    transform: translateY(-2.5px);
+    scale: 1.05;
+}
+
+.subContact3 {
+    padding: 2vw 0;
+}
+
+.subContact3 a {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: var(--button-color);
+    border:2px solid rgb(111, 34, 182);
+    border-radius: 10px;
+}
+
+form {
+    margin: 3vh auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.subContact11 {
+    display: none;
+}
+
+.subContact11 h1 {
+    font-size: calc(2.5rem + 1.2vw);
+    margin: 0 0 5vh 0;
+}
+
+#name, #email {
+    padding: 10px 15px;
+    height: 3rem;
+    width: 30vw;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+#textarea {
+    padding: 10px 15px;
+    height: 7rem;
+    width: 30vw;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+#name, #email, #textarea {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 8px;
+}
+
+#submit {
+    margin: 3rem 0;
+    height: 3rem;
+    width: calc(6rem + 6vw);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: var(--button-color);
+    border:2px solid rgba(111, 34, 182, 0.649);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+footer {
+    margin: 3vh 0 2vh 0;
+    text-align: center;
+    color: rgb(122, 122, 122);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+    transition: 0.5s;
+}
+
+footer a:hover {
+    text-decoration: underline 0.11rem rgb(0, 68, 255);
+}
+
+@media only screen and (max-width: 768px) {
+
+    main {
+        margin: 5vh auto;
+        flex-direction: column-reverse;
+    }
+
+    #name, #email, #textarea {
+        width: 70vw;
+    }
+
+    .subContact1 {
+        display: none;
+    }
+
+    .subContact11 {
+        display: block;
+    }
+
+    form {
+        padding: 30px 20px 0 20px;
+        gap: 2vh;
+        border: 1px solid blueviolet;
+        border-radius: 10px;
+    }
+
+    form {
+        align-items: center;
+    }
+
+    aside {
+        right: 1.5rem;
+    }
+
+    nav {
+        width: 90vw;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+}
